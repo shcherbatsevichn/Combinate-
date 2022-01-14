@@ -77,10 +77,10 @@ class Combinate{
             }else{              // если мы на нужной глубине
                 for($e = 0; $e < count($arr); $e++){        //перебираем 
                     $res2 = $res.$mainnumb.$arr[$e];
-                    if(strlen($res2) == $this->length){
+                    if(strlen($res2) == $this->length){  //если значение равно длине подмножества, просто его выводим
                         echo($res2."<br>");
                         $counter--;
-                    }else{
+                    }else{                               // если не подходит, добавляем еще один элемент из остаточного массива
                         $arres = $this->delete_element($e, $arr);
                         $res2 = $res2.$arres[$e];  
                         if(strlen($res2) == $this->length){
